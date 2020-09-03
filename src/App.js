@@ -22,6 +22,7 @@ import Brightness5Icon from '@material-ui/icons/Brightness5';
 import { Icon } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import LeetCodeNestedList from './leetCode/LeetCode'
 
 
 function App(props) {
@@ -54,23 +55,8 @@ function App(props) {
     <div>
       <div className={classes.toolbar} />
       <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <LeetCodeNestedList/>
+      
     </div>
   );
 
@@ -113,11 +99,6 @@ function App(props) {
 
         </IconButton>
       </div>
-
-            
-            
-
-
           </Toolbar>
         </AppBar>
         <nav className={classes.drawer} aria-label="mailbox folders">
